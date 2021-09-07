@@ -71,7 +71,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                  RGB_VAI,  RGB_VAD, LCTL(LSFT(KC_G)), _______,                  //                  Brightness+         Brightness-         Ungroup                 Show/Hide Selection
                  LCA(KC_B),  _______, _______, LSA(KC_A),                       //Paint Bucket      Detach Instance                                                 Undo Auto Layout
                  _______,  _______, LALT(KC_V), KC_RIGHT,                       //                                                          Distr. Center V         Right
-        KC_MSEL,  LSFT(KC_P), _______, KC_UP, KC_DOWN,                          //Media Player      Pencil                                  Up                      Down
+        KC_MSEL,  LSFT(KC_P), KC_B, KC_UP, KC_DOWN,                             //Media Player      Pencil              Paint Bucket        Up                      Down
         RGB_MOD,  KC_S,  LSFT(KC_L), LCA(KC_V), KC_LEFT,                        //RGB Mode+         Slice Tool          Arrow               Align V                 Left
         RGB_TOG,  KC_K,  KC_O,   _______, _______,                              //RGB Toggle        Scale               Ellipse
 
@@ -306,6 +306,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
 
     void oled_task_user(void) {
             render_logo();
+
     }
 
 #endif
